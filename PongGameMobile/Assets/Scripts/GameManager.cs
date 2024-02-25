@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,22 +12,28 @@ public class GameManager : MonoBehaviour
     public void OnScoreZoneReached(int id)
     {
        // onReset?.Invoke();
-
-
-
         if (id == 1)
             scorePlayer1++;
 
-        if(id==2)
+        if(id == 2)
             scorePlayer2++;
 
-        UpdatesScores();
+        UpdateScores();
+        HighlightScore(id);
     }
 
-    public void UpdatesScores()
+    private void UpdateScores()
     {
         scoreTextBlue.SetScore(scorePlayer1);
         scoreTextRed.SetScore(scorePlayer2);
     }
 
+    public void HighlightScore(int id)
+    { 
+        if(id ==1) 
+            scoreTextBlue.Highlight();
+        else 
+            scoreTextRed.Highlight();
+
+    }
 }
