@@ -8,7 +8,7 @@ public class PlayerTwoControl : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0)
+     /*   if (Input.touchCount > 0)
         {
             Touch dokunma = Input.GetTouch(0);
 
@@ -20,6 +20,6 @@ public class PlayerTwoControl : MonoBehaviour
 
                 transform.position = Vector2.MoveTowards(transform.position, dokunmaPozisyonu, hareketHizi * Time.deltaTime);
             }
-        }
+        }*/
     }
 }
