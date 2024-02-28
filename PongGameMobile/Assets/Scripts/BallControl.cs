@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallControl : MonoBehaviour
 {
     public GameManager gameManager;
-    public Rigidbody2D rgb;
+    public Rigidbody2D rgb2d;
     public float hýz= 4f;
     public float hizArtisMiktari = 1.2f;
     public float maxAçý = 0.67f;
@@ -29,7 +29,7 @@ public class BallControl : MonoBehaviour
         //Vector2 dir = Random.value < 0.5f ? Vector2.left : Vector2.right;
 
         dir.y = Random.Range(-maxAçý, maxAçý);
-        rgb.velocity = dir * hýz;
+        rgb2d.velocity = dir * hýz;
     }
 
     private void ResetBall()
@@ -55,7 +55,7 @@ public class BallControl : MonoBehaviour
         PlayerControl player =collision.collider.GetComponent<PlayerControl>();
         if (player)
         {
-            rgb.velocity *= hizArtisMiktari;
+            rgb2d.velocity *= hizArtisMiktari;
         }
 
     }

@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 930522165}
-  rgb: {fileID: 299191729}
+  rgb2d: {fileID: 299191729}
   "h\u0131z": 4
   hizArtisMiktari: 1.2
   "maxA\xE7\u0131": 0.67
@@ -971,7 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644210380}
   m_Layer: 0
-  m_Name: Paddles
+  m_Name: Players
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,6 +1298,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: playerid
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1343,6 +1351,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1644210380}
     m_Modifications:
     - target: {fileID: 939037249430598719, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 939037249430598719, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
       objectReference: {fileID: 0}
@@ -1382,9 +1394,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1330498520374610048, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3939193461417054839, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
+      propertyPath: playerid
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4366059749579070383, guid: fe3255b96aeaf5142b9d5168d8d1f25c, type: 3}
       propertyPath: m_Enabled
