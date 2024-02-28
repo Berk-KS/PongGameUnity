@@ -8,10 +8,22 @@ public class PlayerControl : MonoBehaviour
     public Animator animator;
     public int playerid;
 
+    private Vector3 startPosition;
+
     private void Start()
     {
+        startPosition = transform.position;
+        GameManager.instance.onReset += ResetPosition;
 
     }
+
+    private void ResetPosition()
+    {
+        transform.position = startPosition;
+    }
+
+
+
     public void Update()
     {
         // Tüm dokunmatik giriþleri al

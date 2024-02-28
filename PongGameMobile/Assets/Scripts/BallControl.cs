@@ -17,7 +17,16 @@ public class BallControl : MonoBehaviour
     void Start()
     {
         InitialPush();
+        GameManager.instance.onReset += ResetBall;
     }
+
+    private void ResetBall()
+    {
+        ResetBallPosition();
+        InitialPush();
+    }
+
+
 
     private void InitialPush()
     {
@@ -32,7 +41,7 @@ public class BallControl : MonoBehaviour
         rgb2d.velocity = dir * hýz;
     }
 
-    private void ResetBall()
+    private void ResetBallPosition()
     {
         float posY = Random.Range(-maxBaslangýcY, maxBaslangýcY);
         Vector2 position = new Vector2(baslangýcX, posY);
@@ -44,10 +53,7 @@ public class BallControl : MonoBehaviour
         ScoreZone scoreZone= collision.GetComponent<ScoreZone>();
         if (scoreZone )
         {
-            gameManager.OnScoreZoneReached(scoreZone.id);
-
-            ResetBall();
-            InitialPush();
+            GameManager.instance.OnScoreZoneReached(scoreZone.id);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
