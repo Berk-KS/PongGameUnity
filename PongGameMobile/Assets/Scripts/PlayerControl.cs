@@ -32,7 +32,7 @@ public class PlayerControl : MonoBehaviour
                 }
             }
             // Ekranýn sað tarafýnda dokunma algýlandýysa
-            else
+            else if(touch.position.x >= Screen.width / 2 && playerid == 2)
             {
                 if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary )
                 {
