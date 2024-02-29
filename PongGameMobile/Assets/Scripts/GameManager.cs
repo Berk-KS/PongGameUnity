@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public GameUi gameUi;
+    public GameUI gameUI;
     public int scorePlayer1, scorePlayer2;
     public Action onReset;
 
@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
     public void OnScoreZoneReached(int id)
     {
 
@@ -38,8 +36,8 @@ public class GameManager : MonoBehaviour
         if(id == 2)
             scorePlayer2++;
 
-        gameUi.UpdateScores(scorePlayer1,scorePlayer2);
-        gameUi.HighlightScore(id);
+        gameUI.UpdateScores(scorePlayer1,scorePlayer2);
+        gameUI.HighlightScore(id);
     }
 
 }

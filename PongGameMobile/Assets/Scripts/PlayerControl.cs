@@ -22,8 +22,6 @@ public class PlayerControl : MonoBehaviour
         transform.position = startPosition;
     }
 
-
-
     public void Update()
     {
         // Tüm dokunmatik giriþleri al
@@ -53,23 +51,12 @@ public class PlayerControl : MonoBehaviour
 
                     transform.position = Vector2.MoveTowards(transform.position, dokunmaPozisyonu, hareketHizi * Time.deltaTime);
                     
-                    
                 }
             }
         }
-
-
-       // void MovePlayer(int playerNumber, int direction)
-       // {
-            // Oyuncu hareketi burada iþlenir
-            // playerNumber: Oyuncu numarasý (1 veya 2)
-            // direction: Hareket yönü (-1 sola, 1 saða)
-            // Örneðin, transform.Translate veya Rigidbody kullanabilirsiniz.
-       // }
-    
     }
 
-
+        
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
@@ -77,9 +64,7 @@ public class PlayerControl : MonoBehaviour
            // Debug.Log("Ýki nesne çarpýþtý!");
 
             animator.SetTrigger("kig");
-            // Ýstediðiniz iþlemleri burada yapabilirsiniz.
+            //çarptýðýnda animasyon devreye girdi
         }
     }
-
-
 }

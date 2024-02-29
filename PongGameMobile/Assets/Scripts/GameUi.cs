@@ -2,31 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameUi : MonoBehaviour
+public class GameUI : MonoBehaviour
 {
-    public ScoreText scoreTextRed, scoreTextBlue;
+    public ScoreText scoreTextPlayer2, scoreTextPlayer1;
     public GameObject menuObject;
 
-    public void UpdateScores(int scorePlayer1,int scorePlayer2)
+    public void UpdateScores(int scorePlayer1, int scorePlayer2)
     {
-        scoreTextBlue.SetScore(scorePlayer1);
-        scoreTextRed.SetScore(scorePlayer2);
+        scoreTextPlayer1.SetScore(scorePlayer1);
+        scoreTextPlayer2.SetScore(scorePlayer2);
     }
 
     public void HighlightScore(int id)
     {
         if (id == 1)
-            scoreTextBlue.Highlight();
+            scoreTextPlayer1.Highlight();
         else
-            scoreTextRed.Highlight();
-
+            scoreTextPlayer2.Highlight();
+       
     }
-    public void OnPlayGameButtonClicked()
+    public void buttonbasss()
     {
         Debug.Log("bas");
-        menuObject.SetActive(true);
-
+        menuObject.SetActive(false);
     }
-
-
 }
