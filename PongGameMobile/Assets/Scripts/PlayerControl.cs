@@ -40,7 +40,7 @@ public class PlayerControl : MonoBehaviour
                     dokunmaPozisyonu.x = transform.position.x;
                    
                     transform.position = Vector2.MoveTowards(transform.position, dokunmaPozisyonu, hareketHizi * Time.deltaTime);
-                    Debug.Log("sol taraf");
+                    
                 }
             }
             // Ekranýn sað tarafýnda dokunma algýlandýysa
@@ -52,7 +52,7 @@ public class PlayerControl : MonoBehaviour
                     dokunmaPozisyonu.x = transform.position.x;
 
                     transform.position = Vector2.MoveTowards(transform.position, dokunmaPozisyonu, hareketHizi * Time.deltaTime);
-                    Debug.Log("sað taraf");
+                    
                     
                 }
             }
