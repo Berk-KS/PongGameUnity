@@ -18,6 +18,7 @@ public class BallControl : MonoBehaviour
     {
         InitialPush();
         GameManager.instance.onReset += ResetBall;
+        GameManager.instance.gameUI.onStartGame += ResetBall;
     }
 
     private void ResetBall()
