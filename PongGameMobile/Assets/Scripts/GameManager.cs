@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameUI gameUI;
     public int scorePlayer1, scorePlayer2;
     public Action onReset;
+    public int maxScore = 4;
 
     private void Awake()
     {
@@ -38,6 +39,20 @@ public class GameManager : MonoBehaviour
 
         gameUI.UpdateScores(scorePlayer1,scorePlayer2);
         gameUI.HighlightScore(id);
+        CheckWin();
+    }
+
+    private void CheckWin()
+    {
+        int winnerId = scorePlayer1 == maxScore? 1 : scorePlayer2 == maxScore? 2 : 0;
+
+        if (winnerId != 0)
+        {
+            //kazanan
+            gameUI.OnGameEnds(winnerId);
+        }
+
+
     }
 
 }
